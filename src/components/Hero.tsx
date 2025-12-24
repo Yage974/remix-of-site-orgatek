@@ -22,6 +22,8 @@ const Hero = () => {
             <img 
               src={logo} 
               alt="ORGATEK - Organiser pour Performer" 
+              width={400}
+              height={240}
               className="h-40 md:h-52 lg:h-60 w-auto mx-auto"
             />
           </div>
