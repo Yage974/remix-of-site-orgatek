@@ -80,7 +80,7 @@ const About = () => {
                     <p className="text-sm text-muted-foreground mt-2">Continents</p>
                   </div>
                   <div className="p-6 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center">
-                    <span className="text-4xl font-display font-bold text-gradient-silver">+100M€</span>
+                    <span className="text-2xl sm:text-4xl font-display font-bold text-gradient-silver whitespace-nowrap">+100M€</span>
                     <p className="text-sm text-muted-foreground mt-2">CA piloté</p>
                   </div>
                 </div>

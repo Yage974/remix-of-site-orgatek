@@ -4,7 +4,8 @@ const experiences = [
   {
     period: "2020 - 2026",
     company: "Tech Power Electronics",
-    role: "Directeur Général puis Président (depuis 2023)",
+    role: "Directeur Général",
+    roleSecondLine: "et Président depuis 2023",
     location: "France",
     description: "Direction générale d'une ETI spécialisée dans l'électronique de puissance. Structuration et retour à la profitabilité.",
     achievements: [
@@ -52,7 +53,8 @@ const experiences = [
   {
     period: "2003 - 2009",
     company: "Michelin",
-    role: "Directeur de site puis Responsable Industriel",
+    role: "Directeur de site",
+    roleSecondLine: "puis Responsable Industriel",
     location: "Brésil & France",
     description: "Évolution au sein du groupe Michelin de directeur de site à responsable industriel. Management d'équipes multiculturelles et pluridisciplinaires.",
     achievements: [
@@ -113,6 +115,7 @@ const Experience = () => {
                   <div className="mb-3">
                     <h3 className="font-display text-xl font-semibold text-foreground">
                       {exp.role}
+                      {exp.roleSecondLine && <span className="block text-lg font-medium">{exp.roleSecondLine}</span>}
                     </h3>
                     <div className={`flex items-center gap-2 text-muted-foreground mt-1 ${
                       index % 2 === 0 ? 'md:justify-end' : ''
