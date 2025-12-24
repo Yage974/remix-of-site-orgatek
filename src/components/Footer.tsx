@@ -36,7 +36,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-xs text-muted-foreground">
-            © {currentYear} ORGATEK. Tous droits réservés.
+            © 2026 ORGATEK. Tous droits réservés.
           </p>
         </div>
       </div>
