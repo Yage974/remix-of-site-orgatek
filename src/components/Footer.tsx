@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
-          <img src={logo} alt="ORGATEK" className="h-20 w-auto mb-6" />
+          <img src={logo} alt="ORGATEK" width={200} height={80} className="h-20 w-auto mb-6" />
 
           {/* Tagline */}
           <p className="text-muted-foreground text-sm mb-8">
