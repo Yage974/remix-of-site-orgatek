@@ -17,8 +17,8 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Logo - LCP element, no lazy loading, high priority */}
-          <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          {/* Logo - LCP element, no lazy loading, high priority, no animation delay */}
+          <div className="mb-8">
             <img 
               src={logo} 
               alt="ORGATEK - Organiser pour Performer" 
@@ -26,7 +26,7 @@ const Hero = () => {
               height={240}
               className="h-40 md:h-52 lg:h-60 w-auto mx-auto"
               loading="eager"
-              decoding="async"
+              decoding="sync"
               fetchPriority="high"
             />
           </div>
