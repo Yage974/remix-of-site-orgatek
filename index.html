@@ -8,15 +8,31 @@
     <meta name="author" content="ORGATEK - Yann Garnier" />
     <meta name="keywords" content="conseil entreprise, organisation, structuration, transformation, lean management, direction industrielle, Bourgogne Franche-Comté" />
 
-    <!-- Preload LCP image for faster initial render -->
-    <link rel="preload" as="image" href="/src/assets/logo-orgatek.png" fetchpriority="high" />
-    
-    <!-- Preconnect to Google Fonts -->
+    <!-- Preconnect to Google Fonts - must be first -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Load fonts with display=swap for better performance -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <!-- Inline critical font-face to avoid render blocking -->
+    <style>
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXp-p7K4KLg.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2) format('woff2');
+      }
+    </style>
+    
+    <!-- Load full fonts async - non-blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" /></noscript>
 
     <meta property="og:title" content="ORGATEK - Organiser pour Performer" />
     <meta property="og:description" content="Conseil en organisation et structuration d'entreprises. +25 ans d'expérience en direction industrielle." />
