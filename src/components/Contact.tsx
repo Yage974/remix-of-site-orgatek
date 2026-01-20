@@ -57,18 +57,11 @@ const Contact = () => {
           </a>
         </div>
 
-        {/* CTA */}
+        {/* Availability note */}
         <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
+          <p className="text-muted-foreground">
             Disponible pour des missions en France et à l'International
           </p>
-          <a 
-            href="mailto:yann.garnier@orgatek.fr?subject=Demande de contact - ORGATEK"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-all duration-200 hover:scale-105"
-          >
-            <Mail className="w-5 h-5" />
-            Envoyer un email
-          </a>
         </div>
       </div>
 

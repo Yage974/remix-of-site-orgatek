@@ -4,9 +4,8 @@ import logo from "@/assets/logo-orgatek.png";
 
 const navLinks = [
   { href: "#about", label: "Qui suis-je" },
-  { href: "#experience", label: "Parcours" },
   { href: "#services", label: "Services" },
-  { href: "#contact", label: "Contact" },
+  { href: "#method", label: "Méthode" },
 ];
 
 const Header = () => {
@@ -51,7 +50,7 @@ const Header = () => {
               href="#contact"
               className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors duration-200"
             >
-              Me contacter
+              Contact
             </a>
           </nav>
 
@@ -84,7 +83,7 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-2 px-5 py-3 bg-primary text-primary-foreground text-center font-medium rounded-md"
               >
-                Me contacter
+                Contact
               </a>
             </div>
           </nav>
