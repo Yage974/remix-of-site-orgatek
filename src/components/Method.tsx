@@ -90,9 +90,9 @@ const Method = () => {
             <img 
               src={logoOrga360} 
               alt="ORGA360™ - Méthode de diagnostic organisationnel" 
-              className="h-20 md:h-28 w-auto"
-              width={280}
-              height={112}
+              className="h-24 md:h-40 w-auto"
+              width={400}
+              height={160}
               loading="lazy"
               decoding="async"
             />
@@ -119,11 +119,11 @@ const Method = () => {
           {/* Why section */}
           <div className="bg-background rounded-xl p-8 mb-16 border border-border">
             <h3 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">
-              Pourquoi le diagnostic organisationnel devient un enjeu stratégique
+              Pourquoi le diagnostic organisationnel devient<br />un enjeu stratégique
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4 text-center max-w-3xl mx-auto">
               Avec la croissance de l'entreprise, l'organisation évolue plus lentement que l'activité.
-              Les conséquences sont fréquentes : décisions plus lentes, responsabilités floues, 
+              Les conséquences les plus fréquentes sont : décisions plus lentes, responsabilités floues, 
               surcharge du dirigeant, tensions internes.
             </p>
             <p className="text-foreground font-medium text-center">
@@ -136,13 +136,32 @@ const Method = () => {
                 la performance d'une entreprise sans comprendre précisément son organisation réelle.
               </p>
             </div>
+            <div className="text-center mt-6">
+              <a href="#contact">
+                <Button className="gap-2">
+                  Faire le point sur votre organisation
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </a>
+            </div>
           </div>
 
           {/* 5 Pillars */}
           <div className="mb-16">
-            <h3 className="font-display text-2xl font-semibold text-foreground mb-8 text-center">
+            <h3 className="font-display text-2xl font-semibold text-foreground mb-4 text-center">
               Les 5 piliers de la méthode ORGA360™
             </h3>
+            <div className="flex justify-center mb-6">
+              <img 
+                src={logoOrga360} 
+                alt="ORGA360™" 
+                className="h-12 md:h-16 w-auto"
+                width={160}
+                height={64}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
               La méthode ORGA360™ analyse l'organisation de l'entreprise à travers cinq piliers 
               complémentaires et indissociables.
@@ -217,15 +236,6 @@ const Method = () => {
             </p>
           </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <Link to="/#contact">
-              <Button size="lg" className="gap-2">
-                Faire le point sur votre organisation
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
 

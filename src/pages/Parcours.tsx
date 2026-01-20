@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, Calendar, MapPin, ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
@@ -70,6 +71,11 @@ const experiences = [
 ];
 
 const Parcours = () => {
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background dark">
       <Header />
@@ -78,7 +84,7 @@ const Parcours = () => {
           <div className="container mx-auto px-6">
             {/* Back button */}
             <div className="mb-8">
-              <Link to="/#about">
+              <Link to="/">
                 <Button variant="outline" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Retour
@@ -169,10 +175,10 @@ const Parcours = () => {
 
             {/* CTA to go back */}
             <div className="text-center mt-16">
-              <Link to="/#about">
+              <Link to="/">
                 <Button variant="outline" size="lg" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
-                  Retour à l'accueil
+                  Retour
                 </Button>
               </Link>
             </div>

@@ -63,12 +63,6 @@ const About = () => {
                 Ingénieur ENIBe (École Nationale d'Ingénieurs de Belfort) et diplômé de l'EDHEC Business School 
                 (Executive Certificate in Advanced Strategic Management), je combine expertise technique et vision stratégique pour des résultats concrets.
               </p>
-              <Link to="/parcours">
-                <Button variant="outline" className="gap-2">
-                  En savoir plus sur mon parcours
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
             </div>
 
             <div className="flex items-center justify-center">
@@ -97,7 +91,7 @@ const About = () => {
           </div>
 
           {/* Competences */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {competences.map((comp, index) => (
               <div 
                 key={comp.title}
@@ -113,6 +107,16 @@ const About = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Button to parcours */}
+          <div className="text-center">
+            <Link to="/parcours">
+              <Button variant="outline" className="gap-2">
+                En savoir plus sur mon parcours
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
