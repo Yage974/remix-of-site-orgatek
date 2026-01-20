@@ -1,4 +1,6 @@
-import { Target, TrendingUp, Users, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Target, TrendingUp, Users, Settings, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const competences = [
   {
@@ -57,10 +59,16 @@ const About = () => {
                 avec des équipes allant jusqu'à 1 500 collaborateurs et des chiffres d'affaires de plusieurs 
                 centaines de millions d'euros.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mb-6">
                 Ingénieur ENIBe (École Nationale d'Ingénieurs de Belfort) et diplômé de l'EDHEC Business School 
                 (Executive Certificate in Advanced Strategic Management), je combine expertise technique et vision stratégique pour des résultats concrets.
               </p>
+              <Link to="/parcours">
+                <Button variant="outline" className="gap-2">
+                  En savoir plus sur mon parcours
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
             </div>
 
             <div className="flex items-center justify-center">
