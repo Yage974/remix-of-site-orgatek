@@ -70,7 +70,7 @@ const benefits = [
 
 const Method = () => {
   return (
-    <section id="method" className="py-24 bg-card relative">
+    <section id="method" className="py-24 bg-[#090909] relative">
       {/* Section divider top */}
       <div className="absolute top-0 left-0 right-0 section-divider" />
 
@@ -90,9 +90,9 @@ const Method = () => {
             <img 
               src={logoOrga360} 
               alt="ORGA360™ - Méthode de diagnostic organisationnel" 
-              className="h-24 md:h-40 w-auto"
-              width={400}
-              height={160}
+              className="h-32 md:h-48 lg:h-56 w-auto"
+              width={560}
+              height={224}
               loading="lazy"
               decoding="async"
             />
@@ -117,7 +117,7 @@ const Method = () => {
           </div>
 
           {/* Why section */}
-          <div className="bg-background rounded-xl p-8 mb-16 border border-border">
+          <div className="bg-card rounded-xl p-8 mb-16 border border-border">
             <h3 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">
               Pourquoi le diagnostic organisationnel devient<br />un enjeu stratégique
             </h3>
@@ -130,7 +130,7 @@ const Method = () => {
               Dans la majorité des cas, il ne s'agit pas d'un problème de compétences ou de management, 
               mais d'un problème d'organisation.
             </p>
-            <div className="mt-6 p-4 bg-card rounded-lg border border-primary/30">
+            <div className="mt-6 p-4 bg-background rounded-lg border border-primary/30">
               <p className="text-center text-primary font-medium">
                 ORGA360™ repose sur un principe simple : on ne peut pas améliorer durablement 
                 la performance d'une entreprise sans comprendre précisément son organisation réelle.
@@ -155,9 +155,9 @@ const Method = () => {
               <img 
                 src={logoOrga360} 
                 alt="ORGA360™" 
-                className="h-12 md:h-16 w-auto"
-                width={160}
-                height={64}
+                className="h-16 md:h-20 lg:h-24 w-auto"
+                width={240}
+                height={96}
                 loading="lazy"
                 decoding="async"
               />
@@ -170,7 +170,7 @@ const Method = () => {
               {pillars.map((pillar, index) => (
                 <div 
                   key={pillar.title}
-                  className="p-6 bg-background rounded-lg border border-border hover:border-primary/50 transition-all duration-300 group"
+                  className="p-6 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -201,7 +201,7 @@ const Method = () => {
               {offers.map((offer) => (
                 <div 
                   key={offer.name}
-                  className="p-6 bg-background rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center group"
+                  className="p-6 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center group"
                 >
                   <offer.icon className="w-10 h-10 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
                   <h4 className="font-display font-semibold text-foreground mb-3">
@@ -219,7 +219,7 @@ const Method = () => {
           </div>
 
           {/* Benefits */}
-          <div className="bg-background rounded-xl p-8 mb-16 border border-border">
+          <div className="bg-card rounded-xl p-8 mb-16 border border-border">
             <h3 className="font-display text-2xl font-semibold text-foreground mb-8 text-center">
               Les bénéfices d'un diagnostic ORGA360™
             </h3>

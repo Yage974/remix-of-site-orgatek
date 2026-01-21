@@ -77,10 +77,10 @@ const Parcours = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background dark">
+    <div className="min-h-screen bg-[#090909] dark">
       <Header />
       <main className="pt-24">
-        <section className="py-24 bg-card relative">
+        <section className="py-24 bg-[#090909] relative">
           <div className="container mx-auto px-6">
             {/* Back button */}
             <div className="mb-8">
@@ -122,7 +122,7 @@ const Parcours = () => {
 
                   {/* Content card */}
                   <div className={`ml-8 md:ml-0 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
-                    <div className="p-6 bg-background rounded-lg border border-border hover:border-primary/50 transition-all duration-300">
+                    <div className="p-6 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300">
                       {/* Period */}
                       <div className={`flex items-center gap-2 text-sm text-primary mb-3 ${
                         index % 2 === 0 ? 'md:justify-end' : ''
@@ -175,7 +175,7 @@ const Parcours = () => {
 
             {/* CTA to go back */}
             <div className="text-center mt-16">
-              <Link to="/">
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 <Button variant="outline" size="lg" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Retour

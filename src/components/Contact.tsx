@@ -2,7 +2,7 @@ import { Mail, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-card relative">
+    <section id="contact" className="py-24 bg-[#090909] relative">
       {/* Section divider top */}
       <div className="absolute top-0 left-0 right-0 section-divider" />
 
@@ -27,7 +27,7 @@ const Contact = () => {
           {/* Email */}
           <a 
             href="mailto:yann.garnier@orgatek.fr"
-            className="group p-8 bg-background rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center"
+            className="group p-8 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center"
           >
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
               <Mail className="w-6 h-6 text-primary" />
@@ -43,7 +43,7 @@ const Contact = () => {
           {/* Phone */}
           <a 
             href="tel:+33767415105"
-            className="group p-8 bg-background rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center"
+            className="group p-8 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center"
           >
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
               <Phone className="w-6 h-6 text-primary" />
