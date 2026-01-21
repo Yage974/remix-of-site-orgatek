@@ -43,28 +43,28 @@ const Footer = () => {
           <nav className="flex flex-wrap justify-center gap-6 mb-8">
             {isParcoursPage ? (
               <>
-                <Link to="/#about" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="/#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Qui suis-je
-                </Link>
-                <Link to="/parcours" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                </a>
+                <Link to="/parcours" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Parcours
                 </Link>
-                <Link to="/#services" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="/#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Services
-                </Link>
-                <Link to="/#method" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                </a>
+                <a href="/#method" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Méthode
-                </Link>
-                <Link to="/#contact" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                </a>
+                <a href="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Contact
-                </Link>
+                </a>
               </>
             ) : (
               <>
                 <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Qui suis-je
                 </a>
-                <Link to="/parcours" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/parcours" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Parcours
                 </Link>
                 <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

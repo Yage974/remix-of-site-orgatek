@@ -26,7 +26,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {/* Email */}
           <a 
-            href="mailto:yann.garnier@orgatek.fr"
+            href="mailto:contact@orgatek.fr"
             className="group p-8 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center"
           >
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
@@ -36,7 +36,7 @@ const Contact = () => {
               Email
             </h3>
             <p className="text-muted-foreground text-sm break-all">
-              yann.garnier@orgatek.fr
+              contact@orgatek.fr
             </p>
           </a>
 

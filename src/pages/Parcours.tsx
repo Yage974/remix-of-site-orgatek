@@ -84,12 +84,18 @@ const Parcours = () => {
           <div className="container mx-auto px-6">
             {/* Back button */}
             <div className="mb-8">
-              <Link to="/">
+              <a 
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/';
+                }}
+              >
                 <Button variant="outline" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Retour
                 </Button>
-              </Link>
+              </a>
             </div>
 
             {/* Section header */}
@@ -175,12 +181,18 @@ const Parcours = () => {
 
             {/* CTA to go back */}
             <div className="text-center mt-16">
-              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+              <a 
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/';
+                }}
+              >
                 <Button variant="outline" size="lg" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Retour
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </section>

@@ -55,20 +55,20 @@ const Header = () => {
             {isParcoursPage ? (
               <>
                 {navLinks.map((link) => (
-                  <Link
+                  <a
                     key={link.href}
-                    to={`/${link.href}`}
+                    href={`/${link.href}`}
                     className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 ))}
-                <Link
-                  to="/#contact"
+                <a
+                  href="/#contact"
                   className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors duration-200"
                 >
                   Contact
-                </Link>
+                </a>
               </>
             ) : (
               <>
@@ -108,22 +108,22 @@ const Header = () => {
               {isParcoursPage ? (
                 <>
                   {navLinks.map((link) => (
-                    <Link
+                    <a
                       key={link.href}
-                      to={`/${link.href}`}
+                      href={`/${link.href}`}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   ))}
-                  <Link
-                    to="/#contact"
+                  <a
+                    href="/#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="mt-2 px-5 py-3 bg-primary text-primary-foreground text-center font-medium rounded-md"
                   >
                     Contact
-                  </Link>
+                  </a>
                 </>
               ) : (
                 <>
