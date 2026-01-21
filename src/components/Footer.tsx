@@ -1,14 +1,38 @@
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo-orgatek.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const isParcoursPage = location.pathname === "/parcours";
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    if (isParcoursPage) {
+      e.preventDefault();
+      window.location.href = `/${sectionId}`;
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (isParcoursPage) {
+      window.scrollTo(0, 0);
+    }
+  };
 
   return (
     <footer className="py-12 bg-background border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
-          <img src={logo} alt="ORGATEK" width={200} height={80} className="h-20 w-auto mb-6" />
+          {isParcoursPage ? (
+            <Link to="/" onClick={handleLogoClick}>
+              <img src={logo} alt="ORGATEK" width={200} height={80} className="h-20 w-auto mb-6" />
+            </Link>
+          ) : (
+            <a href="#">
+              <img src={logo} alt="ORGATEK" width={200} height={80} className="h-20 w-auto mb-6" />
+            </a>
+          )}
 
           {/* Tagline */}
           <p className="text-muted-foreground text-sm mb-8">
@@ -17,18 +41,43 @@ const Footer = () => {
 
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6 mb-8">
-            <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Qui suis-je
-            </a>
-            <a href="#experience" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Parcours
-            </a>
-            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Services
-            </a>
-            <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Contact
-            </a>
+            {isParcoursPage ? (
+              <>
+                <Link to="/#about" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Qui suis-je
+                </Link>
+                <Link to="/parcours" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Parcours
+                </Link>
+                <Link to="/#services" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Services
+                </Link>
+                <Link to="/#method" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Méthode
+                </Link>
+                <Link to="/#contact" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Contact
+                </Link>
+              </>
+            ) : (
+              <>
+                <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Qui suis-je
+                </a>
+                <Link to="/parcours" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Parcours
+                </Link>
+                <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Services
+                </a>
+                <a href="#method" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Méthode
+                </a>
+                <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Contact
+                </a>
+              </>
+            )}
           </nav>
 
           {/* Divider */}

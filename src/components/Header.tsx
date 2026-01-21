@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-orgatek.png";
 
@@ -11,6 +12,8 @@ const navLinks = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isParcoursPage = location.pathname === "/parcours";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +22,12 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLogoClick = () => {
+    if (isParcoursPage) {
+      window.scrollTo(0, 0);
+    }
+  };
 
   return (
     <header
@@ -31,27 +40,55 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center">
-            <img src={logo} alt="ORGATEK" width={160} height={64} className="h-16 w-auto" />
-          </a>
+          {isParcoursPage ? (
+            <Link to="/" onClick={handleLogoClick} className="flex items-center">
+              <img src={logo} alt="ORGATEK" width={160} height={64} className="h-16 w-auto" />
+            </Link>
+          ) : (
+            <a href="#" className="flex items-center">
+              <img src={logo} alt="ORGATEK" width={160} height={64} className="h-16 w-auto" />
+            </a>
+          )}
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors duration-200"
-            >
-              Contact
-            </a>
+            {isParcoursPage ? (
+              <>
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={`/${link.href}`}
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <Link
+                  to="/#contact"
+                  className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors duration-200"
+                >
+                  Contact
+                </Link>
+              </>
+            ) : (
+              <>
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <a
+                  href="#contact"
+                  className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-colors duration-200"
+                >
+                  Contact
+                </a>
+              </>
+            )}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -68,23 +105,47 @@ const Header = () => {
         {isMobileMenuOpen && (
           <nav className="md:hidden py-6 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <a
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-2 px-5 py-3 bg-primary text-primary-foreground text-center font-medium rounded-md"
-              >
-                Contact
-              </a>
+              {isParcoursPage ? (
+                <>
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={`/${link.href}`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                  <Link
+                    to="/#contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="mt-2 px-5 py-3 bg-primary text-primary-foreground text-center font-medium rounded-md"
+                  >
+                    Contact
+                  </Link>
+                </>
+              ) : (
+                <>
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                  <a
+                    href="#contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="mt-2 px-5 py-3 bg-primary text-primary-foreground text-center font-medium rounded-md"
+                  >
+                    Contact
+                  </a>
+                </>
+              )}
             </div>
           </nav>
         )}

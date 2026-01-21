@@ -51,7 +51,7 @@ const Hero = () => {
               href="#about"
               className="px-8 py-4 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-all duration-200 hover:scale-105"
             >
-              Découvrir mon parcours
+              Qui suis-je
             </a>
             <a
               href="#contact"
