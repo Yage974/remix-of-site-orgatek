@@ -64,7 +64,7 @@ const Services = () => {
           </h2>
           <div className="w-16 h-px bg-primary mx-auto mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Un accompagnement sur-mesure pour répondre aux défis de votre entreprise, 
+            Un accompagnement sur-mesure pour répondre aux défis de votre entreprise,<br />
             de l'audit initial jusqu'à la mise en œuvre opérationnelle.
           </p>
         </div>
