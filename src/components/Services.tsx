@@ -26,7 +26,7 @@ const services = [
   {
     icon: BarChart3,
     title: "Performance Industrielle",
-    description: "Amélioration de la performance opérationnelle par le déploiement de méthodologies éprouvées : Lean Manufacturing, amélioration continue, excellence opérationnelle.",
+    description: "Amélioration de la performance opérationnelle par le déploiement de méthodologies éprouvées\u00A0: Lean Manufacturing, amélioration continue, excellence opérationnelle.",
     features: [
       "Diagnostic performance",
       "Déploiement Lean",

@@ -64,7 +64,14 @@ const Footer = () => {
                 <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Qui suis-je
                 </a>
-                <Link to="/parcours" onClick={() => window.scrollTo(0, 0)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link 
+                  to="/parcours" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/parcours';
+                  }} 
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Parcours
                 </Link>
                 <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
