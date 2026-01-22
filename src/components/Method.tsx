@@ -90,9 +90,9 @@ const Method = () => {
             <img 
               src={logoOrga360} 
               alt="ORGA360™ - Méthode de diagnostic organisationnel" 
-              className="h-32 md:h-48 lg:h-56 w-auto"
-              width={560}
-              height={224}
+              className="h-24 md:h-36 lg:h-42 w-auto"
+              width={420}
+              height={168}
               loading="lazy"
               decoding="async"
             />
@@ -122,12 +122,12 @@ const Method = () => {
               Pourquoi le diagnostic organisationnel devient<br />un enjeu stratégique
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4 text-center max-w-3xl mx-auto">
-              Avec la croissance de l'entreprise, l'organisation évolue plus lentement que l'activité.
+              Avec la croissance de l'entreprise, l'organisation évolue plus lentement que l'activité.<br />
               Les conséquences les plus fréquentes sont : décisions plus lentes, responsabilités floues, 
               surcharge du dirigeant, tensions internes.
             </p>
             <p className="text-foreground font-medium text-center">
-              Dans la majorité des cas, il ne s'agit pas d'un problème de compétences ou de management, 
+              Dans la majorité des cas, il ne s'agit pas d'un problème de compétences ou de management,<br />
               mais d'un problème d'organisation.
             </p>
             <div className="mt-6 p-4 bg-background rounded-lg border border-primary/30">
